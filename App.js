@@ -13,12 +13,14 @@ export default function App() {
     height: '100%'}}>
     <View style={styles.container}>
       <Text style={styles.appTitle}>BMI Calculator</Text>
+
       <View style={{flexDirection:"row"}}>
       <TextInput value={weight} onChangeText={text => setWeight(text)}
       style={styles.inputStyle} placeholder="Enter Weight (kg)"></TextInput>
       <TextInput value={height} onChangeText={text => setHeight(text)}
       style={styles.inputStyle} placeholder="Enter Height (m)"></TextInput>
       </View>
+
       <TouchableOpacity        
         onPress={() => {
           // Calculate the BMI
@@ -38,15 +40,14 @@ export default function App() {
           }
           setBMI(bmi)
         }
-      }
-      
-      <Text style={styles.buttonStyle}>Press Me!</Text></TouchableOpacity>
+      }>
+      <Text style={styles.buttonStyle}>Press me!</Text></TouchableOpacity>
       <Text>{weight} / {height} * {height}</Text>
       <Text>{bmi}</Text>
       <Text>{message}</Text>
       <StatusBar style="auto" />
     </View>
-    /></ImageBackground>
+    </ImageBackground>
   );
 }
 
